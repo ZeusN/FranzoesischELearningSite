@@ -1,0 +1,155 @@
+body {
+  padding: 0;
+  margin: 0;
+  left: 0;
+  background-color: rgb(41, 41, 41);
+  overflow: hidden;
+  height:100%; width:100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.test {
+  height: 1024px;
+  position: relative;
+
+}
+
+#sidebar
+{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #202020;
+    padding-top: 110px;
+  
+}
+
+#sidebar a {
+  position: relative;
+  white-space: nowrap;
+  width: 0;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: none;
+}
+
+#sidebar a:hover {
+  color: #b4b4b4
+}
+
+#sideborder
+{
+  position: fixed;
+  top:0px;
+  left:0px;
+  height:120px;
+  left:0px;
+  z-index: 3;
+  width: 200px;
+  background-color: #202020;
+  text-align: center;
+  padding: 0;
+}
+
+
+
+.top {
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:120px;
+  right:0px;
+  z-index: 1;
+  background-color: #202020;
+  border-bottom: solid orange 2px;
+}
+
+.search {
+  padding-left: 30px;
+  margin-top: 35px;
+  margin-left: 380px;
+  margin-right: 380px;
+  background-color: rgb(202, 202, 202);
+  border-style: none;
+  font-size: 17px;
+  border-radius: 90px;
+  }
+
+.search input[type=text]
+{
+  text-decoration: none;
+  background-color:  rgb(202, 202, 202);
+  border-style: none;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.search input[type=text]::-ms-clear {
+  display: none;
+}
+
+.search input[type=text]:focus ~ .top{
+  border-bottom-color: #fdbe47;
+}
+
+.results {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  overflow:auto;
+}
+
+#myUL {
+  
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2px;
+  margin-top: 120px;
+  margin-left: 380px;
+  margin-right: 380px;
+}
+
+#myUL li a {
+  background-color: #303030;
+  padding: 12px;
+  border-bottom: solid orange 2px;
+  text-decoration: none;
+  font-size: 18px; 
+  display: block;
+  color: white;
+}
+
+#myUL li a:hover {
+  background-color: #383838;
+  border-bottom-color: #fdbe47;
+}
+
+.deutsch {
+  color: #c0c0c0;
+  text-align: right;
+  float: right;
+}
+
+h1 {
+  float: center;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  padding: 0;
+  margin-top: 22px;
+}
+
+h1 i {
+  cursor: pointer;
+}
+
+h1 i:hover {
+  color: orange;
+}
