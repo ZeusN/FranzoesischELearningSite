@@ -70,8 +70,16 @@ if (fl == 1)
   <div class="results">
     <ul id="myUL">
       <?php
-$db = new mysqli('localhost', 'root', '', 'Verben');
-$sql = "SELECT * FROM VerbenKurz ORDER BY `verbenkurz`.`french` ASC";
+$db = mysqli_connect("s185.goserver.host", "web289_1", "123456", "web289_db1");
+
+if (!$db) {
+  echo "Fehler: konnte nicht mit MySQL verbinden." . PHP_EOL;
+  echo "Debug-Fehlernummer: " . mysqli_connect_errno() . PHP_EOL;
+  echo "Debug-Fehlermeldung: " . mysqli_connect_error() . PHP_EOL;
+  exit;
+}
+
+$sql = "SELECT * FROM verbenkurz ORDER BY `verbenkurz`.`french` ASC";
 if ($erg = $db->query($sql)) {
 	if ($erg = $db->query($sql)) {
 		while ($datensatz = mysqli_fetch_object($erg)) {
@@ -83,6 +91,7 @@ if ($erg = $db->query($sql)) {
 		}
 	}
 }
+
 ?>
     </ul>
   </div>
@@ -90,7 +99,7 @@ if ($erg = $db->query($sql)) {
 
 
 <div id="sidebar">
-  <a id="hbtn" href="/Verben/index.html"><i class="fas fa-home"></i> - HOME</a>
+  <a id="hbtn" href="/index.html"><i class="fas fa-home"></i> - HOME</a>
 </div>
 
 <div id="sideborder">

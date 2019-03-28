@@ -1,6 +1,6 @@
 <?php
 $id = $_GET['id'];
-$db = new mysqli('localhost', 'root', '', 'Verben');
+$db = mysqli_connect("s185.goserver.host", "web289_1", "123456", "web289_db1");
 $db->query("SET NAMES utf8");
 $sql = "SELECT * FROM praesens where praesens_id='" . $id . "'" ;
 //. $_GET['id'] . "'"
@@ -66,7 +66,7 @@ if ($erg = $db->query($sql)) {
 </head>
 <body>
   <div class="top">
-  <h1><a href="/Verben/index.php"><i class="fas fa-arrow-left"></i></a><?php echo "<span id='halfright'>" . $franz . "</span><span id='right'>" . $deutsch . "</span>";?></h1>
+  <h1><a href="index.php"><i class="fas fa-arrow-left"></i></a><?php echo "<span id='halfright'>" . $franz . "</span><span id='right'>" . $deutsch . "</span>";?></h1>
   </div>
   <div class="content">
   <div class="field">
